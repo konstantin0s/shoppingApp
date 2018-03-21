@@ -23,10 +23,10 @@ document.addEventListener('init', function(event) {
 var db = null;
 
 function onError(tx, e) {
-  alert('Something went wrong' + e.Message);
+  alert('Something went wrong' + e.message);
 }
 
-function onSuccess(tx, e) {
+function onSuccess(tx, r) {
 getItems();
 }
 
