@@ -51,7 +51,7 @@ function renderItems(tx, rs) {
   for(i = 0; i < rs.rows.length; i++) {
   var row = rs.rows.item(i);
   output += "<ons-list-item>" + row.item +
-  "<div class=\"right\"> <ons-button><ons-icon icon=\"trash\"></ons-icon></ons-button></div>" +
+  "<div class=\"right\"> <ons-button onclick='deleteItem(" + row.ID + ");')><ons-icon icon=\"trash\"></ons-icon></ons-button></div>" +
   "</ons-list-item>";
    }
 
@@ -68,4 +68,10 @@ function addItem() {
 
   textbox = "";
   fn.load("home.html")
+}
+
+function deleteItem(id) {
+  db.transaction(function(tx) {
+    tx.executeSql("DELETE FROM items WHERE ID=?", [id], onSuccess, onError);
+  });
 }
