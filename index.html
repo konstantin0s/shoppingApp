@@ -2,9 +2,9 @@
 <html>
 <head>
   <title>Shopping App</title>
-  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <link rel="stylesheet" href="onsen/css/onsenui.css">
+  <link rel="stylesheet" href="onsen/css/onsen-css-components.min.css">
+  <script src="onsen/js/onsenui.min.js"></script>
 </head>
 <body>
   <ons-splitter>
@@ -16,9 +16,6 @@
           </ons-list-item>
           <ons-list-item onclick="fn.load('add.html')" tappable>
             Settings
-          </ons-list-item>
-          <ons-list-item onclick="fn.load('about.html')" tappable>
-            About
           </ons-list-item>
         </ons-list>
       </ons-page>
@@ -35,12 +32,12 @@
           </ons-toolbar-button>
         </div>
         <div class="center">
-          Main
+          Shopping List
         </div>
       </ons-toolbar>
-      <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
-        Swipe right to open the menu!
-      </p>
+      <ons-list>
+    <ons-list-item>Item A</ons-list-item>
+    <ons-list-item>Item B</ons-list-item>
     </ons-page>
   </template>
 
