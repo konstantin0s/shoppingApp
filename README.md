@@ -2,5 +2,7 @@
 Creating a very simple app with HTML, CSS &amp; Javascript.
 
 Clone repo.
-Cd shoppingApp.
+
+cd shoppingApp.
+
 Open index.html page in your browser.
